@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSONP</title>
+    <script src="./jsonp-client.js" charset="utf-8"></script>
+</head>
+<body>
+    <div>
+        <p>
+            JSONP test
+        </p>
+    </div>
+    <script>
+        invoke("http://127.0.0.1:8080/jsonp/", "sum", [1, 3, 5], function(res) {
+            console.log(res);
+        });
+        invoke("http://127.0.0.1:8080/jsonp/", "avg", [1, 3, 5], function(res) {
+            console.log(res);
+        });
+    </script>
+</body>
+</html>
