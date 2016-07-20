@@ -11,7 +11,6 @@ function invoke(url, method, args, callback) {
             document.body.removeChild(script);
         }
     }
-    console.log(url + "?method=" + method + "&args=" + encodeURIComponent(JSON.stringify(args)) + "&callbackName=" + callbackName);
 
     script.src = url + "?method=" + method + "&args=" + encodeURIComponent(JSON.stringify(args)) + "&callbackName=" + callbackName;
     document.body.appendChild(script);
